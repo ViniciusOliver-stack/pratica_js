@@ -12,6 +12,11 @@ const inter = Inter({
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen)
+    document.body.classList.toggle('overflow-hidden')
+  }
+
   const router = useRouter()
 
   return (
@@ -66,7 +71,7 @@ export default function Navbar() {
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={handleMenuToggle}
             >
               <span className="sr-only">Open main menu</span>
               {/* Se for verdadeiro ele vai ficar com um ícone e se for falso ele fica com outro */}
@@ -109,7 +114,7 @@ export default function Navbar() {
       </div>
 
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="backdrop-blur-lg h-[30rem] flex items-center justify-center flex-col gap-6">
+        <div className="backdrop-blur-lg h-screen flex items-center justify-center flex-col gap-6">
           <Link href="/">
             <p
               className={`font-medium text-base ${
