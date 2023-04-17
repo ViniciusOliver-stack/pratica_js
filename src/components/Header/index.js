@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { CardProject } from '../Card'
 
 import {
   IoRocketOutline,
@@ -32,41 +33,77 @@ export default function Header() {
         />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-24">
-        <div className="text-white flex flex-col items-center justify-center text-center gap-2">
-          <IoRocketOutline size={64} />
-          <p class="text-primary-900 text-base font-bold">
-            Os melhores projetos
-          </p>
-          <p>
-            Aqui você pode encontrar uma coleção com os melhores projetos para
-            lhe inspirar na hora da criação.
-          </p>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-24">
+        <div>
+          <a
+            href="#"
+            class="relative block rounded-sm border-t-4 border-primary-900 p-4 bg-zinc-900 shadow-xl sm:p-6 lg:p-8"
+          >
+            <div class="flex items-center gap-4">
+              <IoRocketOutline size={56} className="text-gray-500" />
+
+              <h3 class="text-3xl font-bold sm:text-4xl text-primary-900">
+                100+
+              </h3>
+            </div>
+
+            <p class="mt-4 font-medium text-gray-500">
+              Aqui você pode encontrar uma coleção com os melhores projetos para
+              lhe inspirar na hora da criação.
+            </p>
+          </a>
+          s
         </div>
 
-        <div className="text-white flex flex-col items-center justify-center text-center gap-2">
-          {' '}
-          <IoCloudDownloadOutline size={64} />
-          <p class="text-primary-900 text-base font-bold">
-            Os melhores projetos
-          </p>
-          <p>
-            Aqui você pode encontrar uma coleção com os melhores projetos para
-            lhe inspirar na hora da criação.
-          </p>
+        <div>
+          <a
+            href="#"
+            class="relative block rounded-sm border-t-4 border-primary-900 p-4 bg-zinc-900 shadow-xl sm:p-6 lg:p-8"
+          >
+            <div class="flex items-center gap-4">
+              <IoCloudDownloadOutline size={56} className="text-gray-500" />
+
+              <h3 class="text-3xl font-bold sm:text-4xl text-primary-900">
+                100+
+              </h3>
+            </div>
+
+            <p class="mt-4 font-medium text-gray-500">
+              Aqui você pode encontrar uma coleção com os melhores projetos para
+              lhe inspirar na hora da criação.
+            </p>
+          </a>
+          s
         </div>
 
-        <div className="text-white flex flex-col items-center justify-center text-center gap-2">
-          {' '}
-          <IoShareSocialOutline size={64} />
-          <p class="text-primary-900 text-base font-bold">
-            Os melhores projetos
-          </p>
-          <p>
-            Aqui você pode encontrar uma coleção com os melhores projetos para
-            lhe inspirar na hora da criação.
-          </p>
+        <div>
+          <a
+            href="#"
+            class="relative block rounded-sm border-t-4 border-primary-900 p-4 bg-zinc-900 shadow-xl sm:p-6 lg:p-8"
+          >
+            <div class="flex items-center gap-4">
+              <IoShareSocialOutline size={56} className="text-gray-500" />
+              <h3 class="text-3xl font-bold sm:text-4xl text-primary-900">
+                100+
+              </h3>
+            </div>
+
+            <p class="mt-4 font-medium text-gray-500">
+              Aqui você pode encontrar uma coleção com os melhores projetos para
+              lhe inspirar na hora da criação.
+            </p>
+          </a>
+          s
         </div>
+      </div>
+
+      <h2>Publicados recentemente</h2>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <CardProject />
+        <CardProject />
+        <CardProject />
+        <CardProject />
+        <CardProject />
       </div>
     </div>
   )
